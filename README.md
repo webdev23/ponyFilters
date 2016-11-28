@@ -6,9 +6,7 @@
 ### Demo: https://ponyhacks.com/open/dev/ponyFilters/ 
 
 #### Direct use on any page by injecting in console like so:
-
 <code>
-
 let target = document.getElementsByTagName('script')[0],
 
 inj = document.createElement('script')
@@ -16,3 +14,5 @@ inj = document.createElement('script')
 inj.src= 'https://ponyhacks.com/open/dev/ponyFilters/pwnyfilter.js'
 
 target.appendChild(inj)
+
+</code>
