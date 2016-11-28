@@ -1,16 +1,26 @@
 "use strict";
+
+//~ pwnyFilters.js | Dynamic css filters
+//~ Nico KraZhtest | ponyhacks.com
+//~ Enjoy the zonderful ZTF licence
+
+//~ calling cookies:
+//~ You can call only this code to set the filters
+//~ on any page of the domain
 function gtCk(name){
-    var re = new RegExp(name + "=([^;]+)");
-    var value = re.exec(document.cookie);
-    return (value != null) ? unescape(value[1]) : null;
-  }
+	var re = new RegExp(name + "=([^;]+)");
+	var value = re.exec(document.cookie);
+return (value != null) ? unescape(value[1]) : null;
+}
 document.addEventListener("DOMContentLoaded", function(event) {
-			console.log("ponyFilters loaded!\n");
-			document.documentElement.style.cssText = gtCk('ponyFilters');
-			});
-		
+	console.log("ponyFilters loaded!\n");
+	document.documentElement.style.cssText = gtCk('ponyFilters');
+});
+// End of cookie call
+
+// Bar vars
 var hdump="";
-hdump += "<form style=\"font-size:13px;vertical-align:bottom;margin:0;padding:0\"><span style='font-size:12px'>🐴 </span>";
+hdump += "<meta charset=\"UTF8\"><form style=\"font-size:13px;vertical-align:bottom;margin:0;padding:0\"><span style='font-size:12px'>🐴 </span>";
 hdump += "<label>Brightness<input type=\"checkbox\" id=\"radBright\" title=\"Brightness\" data-current=\"1\" style=\"cursor:pointer\"><label>";
 hdump += "<label>Gray<input type=\"checkbox\" id=\"radGray\" title=\"Grayscale\" data-current=\"0\" style=\"cursor:pointer\"><label>";
 hdump += "<label>Hue<input type=\"checkbox\" id=\"radHR\" title=\"Hue Rotate\" data-current=\"0deg\" style=\"cursor:pointer\"><\/label>";
@@ -28,10 +38,11 @@ hdump += "<label><input type=\"checkbox\" id=\"radSepia\" checked title=\"Sepia\
 hdump += "<label><input type=\"checkbox\" id=\"radSaturate\" checked title=\"Saturate\" data-current=\"0\" style=\"cursor:pointer\">Saturation<label>			 ";
 hdump += "<big><bold><span id=\"lock\" onclick=\"writeCookie();this.style.color='yellowgreen';this.innerHTML='✓'\" title=\"Save settings in a cookie\">&nbsp;&#x1F512;</span><\/bold><\/big><\/form>";
 
+// Inject
 var pwnyBar = document.createElement("div");
     pwnyBar.id = "pwny";
     pwnyBar.innerHTML = hdump;
-    pwnyBar.style = "position:fixed;top:0px;left:0px;width:100%;font-size:13px;background-color:#DEDEDE;color:#111111;z-index:999;text-align:center";
+    pwnyBar.style = "position:absolute;top:46px;left:0px;width:100%;height:30px;font-size:13px;background-color:#DEDEDE;color:#111111;z-index:999;text-align:center";
     console.log(pwnyBar);
 var pwnyStyle = document.createElement("style");   
     pwnyStyle.innerHTML = "#pwny{vertical-align:top;margin:0;display:inline;padding:0}input{vertical-align:middle}#valBox{color:grey;font-size:0.8em}#lock{cursor:pointer;font-size:1.13em}";
@@ -39,7 +50,7 @@ document.getElementsByTagName("body")[0].appendChild(pwnyBar);
 document.getElementsByTagName("body")[0].appendChild(pwnyStyle);				
 		
 
-
+// Random value on start
 function rdm(){
 	return [0,0,0,94,2,0,96,0,1,99,4,1,9,2,0,100,8,0,200,200,13,188,177,0,3,6,166][Math.floor(Math.random()*10)];    		
 };
@@ -47,6 +58,7 @@ let random = rdm();
 document.documentElement.style="filter:invert("+random+"%);-webkit-filter:invert("+random+"%)";   
 document.getElementById("inVal").value = random;
 
+// Filters functions
 function pwnyFilters(){
 	if (document.getElementById("radInvert").checked >= 1) {	
 		document.getElementById("valBox").innerHTML = document.getElementById("inVal").value+"%";
@@ -116,6 +128,8 @@ function pwnyFilters(){
 		document.getElementById("radHR").dataset.current = update;			
       }		      	      
 }
+
+// writeCookie
 function writeCookie() {
 	document.cookie = "ponyFilters="+document.documentElement.style.cssText+"; expires=Thu, 18 Dec 2017 12:00:00 UTC; path=/";	
 	}
