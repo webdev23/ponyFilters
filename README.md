@@ -7,6 +7,7 @@
 
 #### Direct use on any page by injecting in console like so:
 <code>
+
 let target = document.getElementsByTagName('script')[0],
 
 inj = document.createElement('script')
