@@ -12,7 +12,7 @@ let target = document.getElementsByTagName('script')[0],
 
 inj = document.createElement('script')
 
-inj.src= 'https://ponyhacks.com/open/dev/ponyFilters/pwnyfilter.js'
+inj.src= 'https://ponyhacks.com/open/cdn/pwnyfilter.js'
 
 target.appendChild(inj)
 
