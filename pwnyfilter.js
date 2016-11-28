@@ -10,16 +10,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			});
 		
 var hdump="";
-hdump += "<form style=\"font-size:13px;vertical-align:bottom;margin:0;padding:0\">";
+hdump += "<form style=\"font-size:13px;vertical-align:bottom;margin:0;padding:0\"><span style='font-size:12px'>🐴 </span>";
 hdump += "<label>Brightness<input type=\"checkbox\" id=\"radBright\" title=\"Brightness\" data-current=\"1\" style=\"cursor:pointer\"><label>";
 hdump += "<label>Gray<input type=\"checkbox\" id=\"radGray\" title=\"Grayscale\" data-current=\"0\" style=\"cursor:pointer\"><label>";
 hdump += "<label>Hue<input type=\"checkbox\" id=\"radHR\" title=\"Hue Rotate\" data-current=\"0deg\" style=\"cursor:pointer\"><\/label>";
 hdump += "<\/form><strong>";
 hdump += "<a onclick=\"document.documentElement.style='filter:invert(0%);-webkit-filter:invert(0%)'\" href=\"javascript:void(0)\" style=\"font-size:22px;text-decoration:none;vertical-align: top;color:#111111;outline:0\">&#9728;<\/a><\/strong> 		  ";
 hdump += "  <form style=\"display:inline;border:0;vertical-align:middle;outline:0\" onchange=\"pwnyFilters()\">";
-hdump += "<input type=\"range\" min=\"0\" max=\"100\" step=\"1\" id=\"inVal\" data-current=\"00\">";
+hdump += "<input style=\"display:inline;border:0;vertical-align:middle;outline:0\" type=\"range\" min=\"0\" max=\"100\" step=\"1\" id=\"inVal\" data-current=\"00\">";
 hdump += "<\/form><strong>";
-hdump += "<a onclick=\"document.documentElement.style='filter:invert(100%);-webkit-filter:invert(100%)'\" href=\"javascript:void(0)\" style=\"font-size:17px;text-decoration:none;color:#111111;vertical-align:middle;outline:0\">&#127762; <\/a><\/strong><strong><big>";
+hdump += "<a onclick=\"document.documentElement.style='filter:invert(100%);-webkit-filter:invert(100%)'\" href=\"javascript:void(0)\" style=\"font-size:13px;text-decoration:none;color:#111111;vertical-align:middle;outline:0\">&#127762; <\/a><\/strong><strong><big>";
 hdump += "<span id=\"valBox\">";
 hdump += "<\/span><\/big><\/strong>";
 hdump += "<form style=\"display:inline;font-size:13px;margin:0\">";
@@ -119,4 +119,3 @@ function pwnyFilters(){
 function writeCookie() {
 	document.cookie = "ponyFilters="+document.documentElement.style.cssText+"; expires=Thu, 18 Dec 2017 12:00:00 UTC; path=/";	
 	}
-
