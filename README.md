@@ -7,7 +7,7 @@
 
 #### Or drect use on any page by injecting in console like so:
 <code>
-target = document.getElementsByTagName('script')[0],inj = document.createElement('script')
+var target = document.getElementsByTagName('script')[0],inj = document.createElement('script')
 inj.src= 'https://ponyhacks.com/open/cdn/pwnyfilter.js'
 target.appendChild(inj)
 </code>
