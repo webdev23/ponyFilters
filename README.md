@@ -5,7 +5,7 @@
 
 ### Demo: https://ponyhacks.com/open/dev/ponyFilters/ 
 
-#### Drect use on any page by injecting in console like so:
+#### Direct use in console like so:
 var target = document.getElementsByTagName('script')[0],
 inj = document.createElement('script');
 inj.src= 'https://ponyhacks.com/open/cdn/pwnyfilter.js';
