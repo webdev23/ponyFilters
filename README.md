@@ -9,13 +9,13 @@ The bar will ponytself.
 To reload filers settings on page load, include the top cookie code part onlY. <br>
 See source files comments.
 
-#### Direct use in console like so:
+#### For testings via the console:
 var target = document.getElementsByTagName('script')[0],
 inj = document.createElement('script');
 inj.src= 'https://ponyhacks.com/open/cdn/pwnyfilter.js';
 target.appendChild(inj);
-</pre>
-### load with bookmarklet:
+
+### To load anywhere with a bookmarklet:
 javascript:void%20function(){target=document.getElementsByTagName(%22script%22)[0],inj=document.createElement(%22script%22),inj.src=%22https://ponyhacks.com/open/cdn/pwnyfilter.js%22,target.appendChild(inj)}();
 
 ### For power users who needs per site personals css filters customisation.
