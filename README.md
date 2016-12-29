@@ -6,7 +6,7 @@
 
 ### Demo: https://ponyhacks.com/open/dev/ponyFilters/ 
 
-To reload filers settings, on all domain or any wanted page, include the top cookie script part. <br>
+To load back the css filters settings, on all domain or any wanted page, include the top cookie script part. <br>
 See source files comments.
 
 #### For testings via the console:
