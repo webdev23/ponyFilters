@@ -6,7 +6,7 @@ The bar will ponytself.
 
 ### Demo: https://ponyhacks.com/open/dev/ponyFilters/ 
 
-To reload filers settings on page load, include the top cookie code part onlY. <br>
+To reload filers settings, on all domain page load, include the top cookie code part. <br>
 See source files comments.
 
 #### For testings via the console:
