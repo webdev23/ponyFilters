@@ -4,23 +4,6 @@
 //~ Nico KraZhtest | ponyhacks.com | december 2016
 //~ Enjoy the zonderful ZTF licence
 
-//~ Set filters by cookie:
-//~ You can call only this code to set the filters
-//~ on any page of the domain --- - ---
-function gtCk(name){
-	var re = new RegExp(name + "=([^;]+)");
-	var value = re.exec(document.cookie);
-return (value != null) ? unescape(value[1]) : null;
-}
-document.addEventListener("DOMContentLoaded", function(event) {
-	console.log("ponyFilters loaded!\n");
-	document.documentElement.style.cssText += "gtCk('ponykits')"
-	document.documentElement.style.cssText += "gtCk('ponyFilters')"
-	document.body.style.cssText +=  "color:"+"gtCk('color_A')"
-	document.body.style.cssText +=  "background-color:"+"gtCk('color_B')"
-})
-//  --- - ---
-
 // Bar html in a var
 var hdump = "";
 hdump += '<big><bold>\
@@ -70,19 +53,23 @@ hdump += '<big><bold>\
 		data-current="0" style="cursor:pointer"></input><label>Saturate </label>\
 	<span id="lock" onclick=\"writeCookie();\
 		this.innerHTML=\'&#x2713;\'" title="Save settings in a cookie">&nbsp;&#x1F512;</span>\
-	</bold></big></form>\
-	<form oninput="pwnColor_a(this.children[0].value)"><input value="#ff0000"\
-		type="color" id="pwnClrA" /></form>\
+	</bold></big>\
 	</form>\
-	<form oninput="pwnColor_b()"><input value="#0fff00" type="color" id="pwnClrB" />\
+	<form oninput="pwnColor_a(this.children[0].value)">\
+	<input value="#DEDEDE" type="color" id="pwnClrA" />\
 	</form>\
-	<form oninput="pwnColor_c()"><input value="#0affaf" type="color" id="pwnClrC" />\
+	<form oninput="pwnColor_b()">\
+	<input value="#FAFAFA" type="color" id="pwnClrB" />\
+	</form>\
+	<form oninput="pwnColor_c()">\
+	<input value="#0AFFAF" type="color" id="pwnClrC" />\
+	</form>\
 	</div>';
 
 // Inject
-var pwnyBar = document.createElement("div");
-pwnyBar.id = "pwny";
-pwnyBar.innerHTML = hdump;
+var pwnyBar = document.createElement("div")
+pwnyBar.id = "pwny"
+pwnyBar.innerHTML = hdump
 
 // Create pwny bar
 pwnyBar.style = "position:fixed;display:inline;width:100%;height:32px;font-size:10px;\
@@ -95,7 +82,7 @@ var position = ["left:-47.70%;top:400px:transform: rotate(-180deg)",
 pwnyBar.style.cssText += "left:49.12%;top:400px;transform: rotate(180deg)"
 
 // Bar css
-var pwnyStyle = document.createElement("style");
+var pwnyStyle = document.createElement("style")
 pwnyStyle.innerHTML = "\
 	#pwny{outline:0;vertical-align:top;margin:-5px;padding:0;line-height: 1.5;font-size: 15px;\
 		font-weight: 400;display:inline !important}\
@@ -204,7 +191,7 @@ function pwnyFilters() {
     // Saturation
     if (document.getElementById("radSaturate").checked >= 1) {
         document.getElementById("valBox").innerHTML = 
-			document.getElementById("inVal").value * 4 + 20 + "%"; // <^_^>
+			document.getElementById("inVal").value * 4 + 100 + "%"; // <^_^>
         var e = document.getElementById("valBox").innerHTML;
         var t = document.getElementById("radBright").dataset.current;
         var l = document.getElementById("radInvert").dataset.current + "%";
@@ -312,36 +299,6 @@ if (!window.webkitURL){
 	document.body.setAttribute("onresize","pwnyScroll()")
 }
 console.log(pwnyBar);
-
-// Random value on start
-//~ function rdm(){
-	//~ return [0,0,0,94,2,1,99,100,8,0,200,200,13,188,177,0,3,6,166][Math.floor(Math.random()*10)];
-//~ }
-//~ var random = rdm();
-//~ document.body.style.filter = 'sepia(('+random+'%))invert(('+random+'%))saturate(('+random+'%))\
-	//~ brightness(('+random+'%))grayscale(('+random+'%))hue-rotate(0deg);\
-	//~ -webkit-filter:sepia(('+random+'%))invert(('+random+'%))saturate(('+random+'%))\
-	//~ brightness(('+random+'%))grayscale(('+random+'%))hue-rotate(0deg)';
-//~ document.getElementById("inVal").value = random;
-// automation 
-//~ var i = 0;
-//~ var automation = setInterval(function(){
- //~ fadeIn();
-//~ }, 1);
-//~ function fadeIn(){
-	//~ document.querySelector('input[type=range]').value = 76 + i++;
-	 //~ pwnyFilters()
-//~ }
-//~ setTimeout(function(){
- //~ clearInterval(automation)
-//~ }, 3000)
-
-// Fixed bar
-setTimeout(function(){
-	pwnyScroll()
-	pwnyFilters() 
-	// pwnColors()
-}, 300)
 
 // keyboard events
 document.addEventListener('keydown', (event) => {
