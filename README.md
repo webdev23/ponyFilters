@@ -1,8 +1,10 @@
+<img align="right" src="http://i.imgur.com/1j0dqg0.png"></a>
+
 # ponyFilters
 ### Dynamic css filtering combo bar for users and webmasters.
 ### Settings are saved in a cookie by pressing the lock icon.
 #### To use, just include <b>pwnyFilter.js</b> in the bottom of your html file. <br>
-#### The bar will ponytself.
+#### The bar will ponytself. 
 
 ### Demo: https://ponyhacks.com/open/dev/ponyFilters/ 
 
