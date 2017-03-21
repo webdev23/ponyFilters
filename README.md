@@ -1,8 +1,8 @@
 # ponyFilters
 ### Dynamic css filtering combo bar for users and webmasters.
 ### Settings are saved in a cookie by pressing the lock icon.
-#### To use, just include <b>pwnyFilter.js</b> in the bottom of your html file. <br>
-#### The bar will ponytself.
+#### To use, just include <b>pwnyFilter.js</b> in the bottom of your html file. <br>
+#### The bar will ponytself.
 
 ### Demo: https://ponyhacks.com/open/dev/ponyFilters/ 
 
@@ -15,7 +15,7 @@ See source files comments.
     inj.src= 'https://ponyhacks.com/open/cdn/pwnyfilter.js';
     target.appendChild(inj);
 
-### To load anywhere with a bookmarklet:
+### To load anywhere with a bookmarklet:
 
     javascript:void%20function(){target=document.getElementsByTagName(%22script%22)[0],inj=document.createElement(%22script%22),inj.src=%22https://ponyhacks.com/open/cdn/pwnyfilter.js%22,target.appendChild(inj)}();
 
