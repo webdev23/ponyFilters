@@ -10,13 +10,14 @@ To load back the css filters settings, on all domain or any wanted page, include
 See source files comments.
 
 #### For testings via the console:
-var target = document.getElementsByTagName('script')[0],
-inj = document.createElement('script');
-inj.src= 'https://ponyhacks.com/open/cdn/pwnyfilter.js';
-target.appendChild(inj);
+    var target = document.getElementsByTagName('script')[0],
+    inj = document.createElement('script');
+    inj.src= 'https://ponyhacks.com/open/cdn/pwnyfilter.js';
+    target.appendChild(inj);
 
 ### To load anywhere with a bookmarklet:
-javascript:void%20function(){target=document.getElementsByTagName(%22script%22)[0],inj=document.createElement(%22script%22),inj.src=%22https://ponyhacks.com/open/cdn/pwnyfilter.js%22,target.appendChild(inj)}();
+
+    javascript:void%20function(){target=document.getElementsByTagName(%22script%22)[0],inj=document.createElement(%22script%22),inj.src=%22https://ponyhacks.com/open/cdn/pwnyfilter.js%22,target.appendChild(inj)}();
 
 ### For power users who needs per site personals css filters customisation.
 Drop ponyFilters.user.js in Firefox with greasmonkey installed, or in the extension tab of chromium.<br>
