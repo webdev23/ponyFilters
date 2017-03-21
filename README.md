@@ -9,7 +9,7 @@
 To load back the css filters settings, on all domain or any wanted page, include the top cookie script part. <br>
 See source files comments.
 
-#### For testings via the console:
+#### To test via the console: 
     var target = document.getElementsByTagName('script')[0],
     inj = document.createElement('script');
     inj.src= 'https://ponyhacks.com/open/cdn/pwnyfilter.js';
@@ -33,3 +33,5 @@ See source files comments.
 Drop ponyFilters.user.js in Firefox with greasmonkey installed, or in the extension tab of chromium.<br>
 As soon as settings had been saved by pressing the lock symbol, they will emerge back by cookie.<br>
 This user script can also be found here:<br> https://greasyfork.org/en/scripts/25395-pwnyfilters
+
+Note that some websites disallow dynamics sciptings, like github do.
