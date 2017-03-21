@@ -31,5 +31,5 @@ See source files comments.
 
 ### For power users who needs per site personals css filters customisation.
 Drop ponyFilters.user.js in Firefox with greasmonkey installed, or in the extension tab of chromium.<br>
-As soon as settings had been saved by pressing the lock symbol, they wil emerge back.<br>
+As soon as settings had been saved by pressing the lock symbol, they will emerge back by cookie.<br>
 This user script can also be found here:<br> https://greasyfork.org/en/scripts/25395-pwnyfilters
