@@ -19,6 +19,16 @@ See source files comments.
 
     javascript:void%20function(){target=document.getElementsByTagName(%22script%22)[0],inj=document.createElement(%22script%22),inj.src=%22https://ponyhacks.com/open/cdn/pwnyfilter.js%22,target.appendChild(inj)}();
 
+### You may want to defer the load:
+    (function(){
+    setTimeout(function(){
+    var target = document.getElementsByTagName('*')[0],
+    inj = document.createElement('script');
+    inj.src= 'https://ponyhacks.com/open/cdn/pwnyfilter.js';
+    target.appendChild(inj)}, 3000)
+    })()
+
+
 ### For power users who needs per site personals css filters customisation.
 Drop ponyFilters.user.js in Firefox with greasmonkey installed, or in the extension tab of chromium.<br>
 As soon as settings had been saved by pressing the lock symbol, they wil emerge back.<br>
