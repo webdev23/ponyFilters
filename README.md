@@ -6,7 +6,7 @@
 #### To use, just include <b>pwnyFilter.js</b> in the bottom of your html file. <br>
 #### The bar will ponytself. 
 
-### Demo: https://ponyhacks.com/open/dev/ponyFilters/ 
+### Demo: https://webdev23.github.io/ponyFilters/ 
 
 To load back the css filters settings, on all domain or any wanted page, include the top cookie script part. <br>
 See source files comments.
@@ -14,19 +14,19 @@ See source files comments.
 #### To test via the console: 
     var target = document.getElementsByTagName('script')[0],
     inj = document.createElement('script');
-    inj.src= 'https://ponyhacks.com/open/cdn/pwnyfilter.js';
+    inj.src= 'https://webdev23.github.io/ponyFilters/pwnyFilter.js';
     target.appendChild(inj);
 
 ### To load anywhere with a bookmarklet:
 
-    javascript:void%20function(){target=document.getElementsByTagName(%22script%22)[0],inj=document.createElement(%22script%22),inj.src=%22https://ponyhacks.com/open/cdn/pwnyfilter.js%22,target.appendChild(inj)}();
+    javascript:void%20function(){target=document.getElementsByTagName(%22script%22)[0],inj=document.createElement(%22script%22),inj.src=%22https://webdev23.github.io/ponyFilters/pwnyFilter.js%22,target.appendChild(inj)}();
 
 ### You may want to defer the load:
     (function(){
     setTimeout(function(){
     var target = document.getElementsByTagName('*')[0],
     inj = document.createElement('script');
-    inj.src= 'https://ponyhacks.com/open/cdn/pwnyfilter.js';
+    inj.src= 'https://webdev23.github.io/ponyFilters/pwnyFilter.js';
     target.appendChild(inj)}, 3000)
     })()
 
