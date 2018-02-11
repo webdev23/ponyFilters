@@ -330,7 +330,7 @@ document.addEventListener('keydown', (event) => {
  
 // writeCookies
 function writeCookie() {
-	if (window.webkitURL){
+	if (window.URL){
 	document.cookie = "ponyFilters=" + "" +
 		"; expires=Thu, 18 Dec 2072 12:00:00 UTC; path=/"		
 	document.cookie = "ponyFilters="+"-webkit-"+document.documentElement.style.cssText +
