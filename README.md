@@ -17,7 +17,7 @@ See source files comments.
     inj.src= 'https://webdev23.github.io/ponyFilters/pwnyFilter.js';
     target.appendChild(inj);
 
-### To load anywhere with a bookmarklet:
+### The load anywhere bookmarklet:
 
     javascript:void%20function(){target=document.getElementsByTagName(%22script%22)[0],inj=document.createElement(%22script%22),inj.src=%22https://webdev23.github.io/ponyFilters/pwnyFilter.js%22,target.appendChild(inj)}();
 
@@ -34,6 +34,9 @@ See source files comments.
 ### For power users who needs per site personals css filters customisation.
 Drop ponyFilters.user.js in Firefox with greasmonkey installed, or in the extension tab of chromium.<br>
 As soon as settings had been saved by pressing the lock symbol, they will emerge back by cookie.<br>
-This user script can also be found here:<br> https://greasyfork.org/en/scripts/25395-pwnyfilters
+
+Userscript : https://webdev23.github.io/ponyFilters/pwnyFilters.user.js
+
+Can also be found here:<br> https://greasyfork.org/en/scripts/25395-pwnyfilters
 
 Note that some websites disallow dynamics sciptings, like github do.
