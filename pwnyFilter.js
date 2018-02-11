@@ -332,18 +332,18 @@ document.addEventListener('keydown', (event) => {
 function writeCookie() {
 	if (window.webkitURL){
 	document.cookie = "ponyFilters=" + "" +
-		"; expires=Thu, 18 Dec 2017 12:00:00 UTC; path=/"		
+		"; expires=Thu, 18 Dec 2072 12:00:00 UTC; path=/"		
 	document.cookie = "ponyFilters="+"-webkit-"+document.documentElement.style.cssText +
-		"; expires=Thu, 18 Dec 2017 12:00:00 UTC; path=/"
+		"; expires=Thu, 18 Dec 2072 12:00:00 UTC; path=/"
 	} else {
 	document.cookie = "ponykits=" + "" +
-		"; expires=Thu, 18 Dec 2017 12:00:00 UTC; path=/"
+		"; expires=Thu, 18 Dec 2072 12:00:00 UTC; path=/"
 	document.cookie = "ponykits=" + document.documentElement.style.cssText +
-		"; expires=Thu, 18 Dec 2017 12:00:00 UTC; path=/"
+		"; expires=Thu, 18 Dec 2072 12:00:00 UTC; path=/"
 }	document.cookie = "color_A=" + document.getElementById('pwnClrA').value +
-		"; expires=Thu, 18 Dec 2017 12:00:00 UTC; path=/"
+		"; expires=Thu, 18 Dec 2072 12:00:00 UTC; path=/"
 	document.cookie = "color_B=" + document.getElementById('pwnClrB').value +
-		"; expires=Thu, 18 Dec 2017 12:00:00 UTC; path=/"
+		"; expires=Thu, 18 Dec 2072 12:00:00 UTC; path=/"
 }
 
 // Nico KraZhtest @2018
