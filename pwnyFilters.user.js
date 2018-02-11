@@ -45,7 +45,7 @@ document.addEventListener('keydown', (event) => {
 			var hold = document.documentElement.style.cssText,
 			    target = document.getElementsByTagName('script')[0],
 					inj = document.createElement('script');
-			inj.src= 'https://ponyhacks.com/open/cdn/pwnyfilter.js';
+			inj.src= 'https://webdev23.github.io/ponyFilters/pwnyFilter.js';
 			target.appendChild(inj);
 			document.documentElement.style.cssText = hold}
 		if (yop =="!"){
