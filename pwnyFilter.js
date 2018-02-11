@@ -96,7 +96,7 @@ pwnyStyle.innerHTML = "\
 	#pwny input[type=range]::-moz-focus-inner{border: 0;background-color:#9EB95D}\
 	#pwny input[type=color]{border-color: #ff0000;width:20px;height:20px;padding:5px}\
 	#pwny a{text-decoration:none;color:#111111}\
-	#pwny input{all:unset;vertical-align:middle}\
+	#pwny input{vertical-align:middle}\
 	#pwnyCtrl{text-align:center;background-color:#DEDEDE;color:#111111;outline:0;\
 		transform: rotate(270deg);-moz-user-select: none}\
 	#valBox{color:grey;font-size:0.98em}\
