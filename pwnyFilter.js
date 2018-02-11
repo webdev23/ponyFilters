@@ -1,6 +1,6 @@
 "use strict";
 
-//~ pwnyFilters.js | Dynamic css filters
+//~ pwnyFilters.js | Dynamic css filters | v1.7
 //~ Nico KraZhtest | ponyhacks.com | december 2016
 //~ Enjoy the zonderful ZTF licence
 
@@ -88,7 +88,7 @@ pwnyStyle.innerHTML = "\
 		font-weight: 400;display:inline !important}\
 	body{overflow-X:hidden}\
 	#pwny input[type='range']{cursor:pointer;width:70px;height:12px;vertical-align: middle;}\
-	#pwny input[type='checkbox']{padding:0;margin:0 2px 0 3px;vertical-align:middle}\
+	#pwny input[type='checkbox']{padding:0;margin:0 2px 0 3px;vertical-align:middle;min-height:8px;min-width:8px}\
 	#pwny input[type=checkbox]:checked {background: #BADA55}\
 	#pwny input[type=range]::-moz-focus-outer{border:0}\
 	#pwny input[type=range]::-moz-range-thumb {background-color:#9EB95D;width:6px;height:19px;\
@@ -346,4 +346,4 @@ function writeCookie() {
 		"; expires=Thu, 18 Dec 2017 12:00:00 UTC; path=/"
 }
 
-// Nico KraZhtest @2016
+// Nico KraZhtest @2018
