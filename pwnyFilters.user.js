@@ -14,8 +14,7 @@ function gtCk(name){
       value = re.exec(document.cookie);
 return (value != null) ? unescape(value[1]) : null;
 }
-document.addEventListener("DOMContentLoaded", function(event) {
-	console.log("ponyFilters loaded!\n")
+onload = (() => { console.log("ponyFilters loaded!\n")
 	document.documentElement.style.cssText += gtCk('ponykits')
 	document.documentElement.style.cssText += gtCk('ponyFilters')
 	document.body.style.cssText += "color:" + gtCk('color_A')
@@ -24,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		if (txt.color != "") {
 			txt[k].style.color = document.getElementById('pwnClrA').value
 	}}
-})
+})()
 
 var bzs = document.body.getElementsByTagName("img");
 for (var i = 0; i < bzs.length;) {
@@ -59,9 +58,10 @@ document.addEventListener('keydown', (event) => {
   }
  }, false);
 
-document.addEventListener("DOMContentLoaded", function(event) {
-	document.getElementById('pwnClrA').value = document.body.style.color
-	document.getElementById('pwnClrB').value = document.body.style.backgroundColor
-	document.body.setAttribute("onscroll","document.getElementById('pwnClrA').value = document.body.style.color")
+onload = (() => { 
+ document.getElementById('pwnClrA').value = document.body.style.color
+ document.getElementById('pwnClrB').value = document.body.style.backgroundColor
+ document.body.setAttribute("onscroll","document.getElementById('pwnClrA').value = document.body.style.color")
+})()	
+  
 
-})
