@@ -13,7 +13,7 @@ hdump += '<big><bold>\
 	<div class="fix"></div>\
 	<div class="rotatA">\
 	<a href="https://github.com/webdev23/ponyFilters/"\
-		title="Check the pwnyBar sources!">&#x1F434; </a></div>\
+		title="Check the pwnyBar sources!">⛄ </a></div>\
 	<label>Bright</label>\
 	<input type="checkbox" id="radBright" title="Brightness"\
 		data-current="1" style="cursor:pointer"></input>\
