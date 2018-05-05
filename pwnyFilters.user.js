@@ -13,22 +13,18 @@
 onload = (() => { console.log("ponyFilters loaded!\n")
   document.documentElement.style.cssText += localStorage.getItem('ponykits')
   document.documentElement.style.cssText += localStorage.getItem('ponyFilters')
-  document.body.style.cssText += "color:" + localStorage.getItem('color_A')
-  document.body.style.cssText += "background-color:" + localStorage.getItem('ponyFilters')
-  for (var k=0;k<txt.length;k++){
-    if (txt.color != "") {
-      txt[k].style.color = localStorage.getItem('pwnClrA')
-  }}
+  document.body.style.cssText += "color:" + localStorage.getItem('pwnClrB')
+  document.body.style.cssText += "background-color:" + localStorage.getItem('pwnClrA')
+  document.querySelectorAll("p, span, h1, h2, h3").forEach(function(e){  
+    e.style.color = localStorage.getItem('pwnClrC')
+  })
 })()
 
-var bzs = document.body.getElementsByTagName("img");
-for (var i = 0; i < bzs.length;) {
-  var wi = bzs[i].width; var he = bzs[i].height;
-  bzs[i].setAttribute("onmouseup", "window.open(this.src,'this.src','width="+wi+",height="+he+",resizable=1')"), i++
-}
+document.querySelectorAll("img").forEach(function(e){
+  e.setAttribute("onmouseup", "window.open(this.src,'this.src','width="+e.width+",height="+e.height+",resizable=1')")
+})
 
-document.addEventListener('keydown', (event) => {
-  
+onkeydown = ((event) => {
   const keyName = event.key;
   if (keyName === 'Control') {return}
   if (event.ctrlKey) { var yop =  event.key;console.log(yop)
@@ -52,10 +48,11 @@ document.addEventListener('keydown', (event) => {
       document.documentElement.style.cssText = 'filter: sepia(41%) invert(11%) saturate(17%) brightness(1) grayscale(17%) hue-rotate(20deg);\
 -webkit-filter: sepia(41%) invert(11%) saturate(17%) brightness(1) grayscale(17%) hue-rotate(20deg)'}
   }
- }, false);
+ });
 
-onload = (() => { 
- document.getElementById('pwnClrA').value = document.body.style.color
- document.getElementById('pwnClrB').value = document.body.style.backgroundColor
- document.body.setAttribute("onscroll","document.getElementById('pwnClrA').value = document.body.style.color")
-})()
+function writeStorage() {
+  localStorage.setItem('ponykits',document.documentElement.style.cssText)
+  localStorage.setItem('pwnClrA',document.getElementById('pwnClrA').value)
+  localStorage.setItem('pwnClrB',document.getElementById('pwnClrB').value)
+  localStorage.setItem('pwnClrC',document.getElementById('pwnClrC').value)
+}
