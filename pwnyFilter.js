@@ -276,7 +276,7 @@ function pwnColor_b(){
 }
 function pwnColor_c(){
   document.querySelectorAll("p, span, h1, h2, h3").forEach(function(e){  
-    e.style.color = localStorage.getItem('pwnClrC')
+    e.style.color = document.getElementById('pwnClrC').value
   })
 }
 
