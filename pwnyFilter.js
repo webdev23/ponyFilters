@@ -1,6 +1,6 @@
 "use strict";
 /*
- pwnyFilters.js | Dynamic css filters | v1.9
+ pwnyFilters.js | Dynamic css filters | v1.91
  https://github.com/webdev23/ponyFilters
  Nico KraZhtest | ponyhacks.com | May 2018
  ZTF licence
@@ -36,8 +36,8 @@ hdump += '<big><bold>\
   <form style="display:inline;border:0;vertical-align:middle">\
   <input type="range" style="display:inline;border:0;outline:0;margin:0 5px 0 5px" \
     min="0" max="100" step="1" value="00" id="inVal" data-current="00"\
-    onchange="if(this.value < 100){this.stepUp()};if(this.value >= 100){this.value=0}\
-    ;pwnyFilters()" /></input></form>\
+    onchange="pwnyFilters()\
+    ;" /></input></form>\
   <a onclick="document.body.style.cssText =\'filter:sepia(0%)invert(0%)saturate(0%)\
     brightness(100%)grayscale(0%)hue-rotate(0deg);\
     -webkit-filter:sepia(0%)invert(0%)saturate(0%)\
