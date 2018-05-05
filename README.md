@@ -1,5 +1,3 @@
-<img align="right" src="http://i.imgur.com/1j0dqg0.png"></a>
-
 # ponyFilters
 ### Dynamic css filtering combo bar.
 #### Customize your webpage with fine filters adjustment. 
@@ -13,7 +11,7 @@ Brightness, grayscale, hue-rotate, invert, sepia, contrast, background color, fo
 #### Demo on stackoverflow.com
 <img width=800 src="https://i.imgur.com/jXIjx4s.gif"></img>
 
-#### Demo on youtube.com
+<img align="right" src="http://i.imgur.com/1j0dqg0.png"></a>
 
 ### Settings are saved in local storage by pressing the lock icon.
 #### How to use:  
