@@ -37,7 +37,7 @@ hdump += '<big><bold>\
   <input type="range" style="display:inline;border:0;outline:0;margin:0 5px 0 5px" \
     min="0" max="100" step="1" value="00" id="inVal" data-current="00"\
     onwheel="if(this.value < 100){this.stepUp()};if(this.value >= 100){this.value=0}\
-    ;pwnyFilters()" /></input></form>\
+    ;pwnyFilters();pwnyScroll()" /></input></form>\
   <a onclick="document.body.style.cssText =\'filter:sepia(0%)invert(0%)saturate(0%)\
     brightness(100%)grayscale(0%)hue-rotate(0deg);\
     -webkit-filter:sepia(0%)invert(0%)saturate(0%)\
@@ -281,10 +281,10 @@ function pwnColor_c(){
 }
 
 // Fix for firefox position:fixed bug when using css transformation
-// if (!window.webkitURL){
-//  document.body.setAttribute("onscroll","pwnyScroll()")
-//  document.body.setAttribute("onresize","pwnyScroll()")
-// }
+if (!window.webkitURL){
+  document.body.setAttribute("onscroll","pwnyScroll()")
+  document.body.setAttribute("onresize","pwnyScroll()")
+}
 console.log(pwnyBar);
 
 onload = (() => {
