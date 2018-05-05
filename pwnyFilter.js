@@ -293,6 +293,7 @@ onload = (() => {
     e.setAttribute("onmouseup",
       "window.open(this.src,'this.src','width="+wi+",height="+he+",resizable=1')"), i++;}
   })
+  inVal.value = 5
 })
 
 // keyboard events
