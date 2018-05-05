@@ -160,7 +160,7 @@ function pwnyFilters() {
         var a = document.getElementById("radGray").dataset.current + "%";
         var r = document.getElementById("radHR").dataset.current
         var d = document.getElementById("radSaturate").dataset.current + "%";
-        var k = document.getElementById("radContrast").dataset.current;
+        var k = document.getElementById("radContrast").dataset.current / 10
         pwn.style.cssText += "filter:brightness(" + t + ")\
       sepia(" + n + ")invert(" + e + ")saturate(" + d + ")grayscale(" + a + ")\
       hue-rotate(" + r + ")contrast(" + k + ");-webkit-filter:sepia(" + n + ")\
@@ -179,7 +179,7 @@ function pwnyFilters() {
         var a = document.getElementById("radGray").dataset.current + "%";
         var r = document.getElementById("radHR").dataset.current;
         var n = document.getElementById("radSepia").dataset.current + "%";
-        var k = document.getElementById("radContrast").dataset.current;
+        var k = document.getElementById("radContrast").dataset.current / 10
         pwn.style.cssText += "filter:brightness(" + t + ")\
       sepia(" + e + ")invert(" + l + ")saturate(" + d + ")grayscale(" + a + ")\
       hue-rotate(" + r + ")contrast(" + k + ");-webkit-filter:sepia(" + e + ")\
@@ -197,7 +197,7 @@ function pwnyFilters() {
         var n = document.getElementById("radSepia").dataset.current + "%";
         var a = document.getElementById("radGray").dataset.current + "%";
         var r = document.getElementById("radHR").dataset.current
-        var k = document.getElementById("radContrast").dataset.current;
+        var k = document.getElementById("radContrast").dataset.current / 10
         pwn.style.cssText += "filter:brightness(" + t + ")\
       sepia(" + n + ")invert(" + l + ")saturate(" + e + ")grayscale(" + a + ")\
       hue-rotate(" + r + ")contrast(" + k + ");-webkit-filter:sepia(" + n + ")\
@@ -215,7 +215,7 @@ function pwnyFilters() {
         var n = document.getElementById("radSepia").dataset.current + "%";
         var l = document.getElementById("radInvert").dataset.current + "%";
         var d = document.getElementById("radSaturate").dataset.current + "%";
-        var k = document.getElementById("radContrast").dataset.current;
+        var k = document.getElementById("radContrast").dataset.current / 10
         pwn.style.cssText += "filter:brightness(" + e + ")\
       sepia(" + n + ")invert(" + l + ")saturate(" + d + ")grayscale(" + a + ")\
       hue-rotate(" + r + ")contrast(" + k + ");-webkit-filter:sepia(" + n + ")\
@@ -234,7 +234,7 @@ function pwnyFilters() {
         var n = document.getElementById("radSepia").dataset.current + "%";
         var l = document.getElementById("radInvert").dataset.current + "%";
         var d = document.getElementById("radSaturate").dataset.current + "%";
-        var k = document.getElementById("radContrast").dataset.current;
+        var k = document.getElementById("radContrast").dataset.current / 10
         pwn.style.cssText += "filter:brightness(" + t + ")\
       sepia(" + n + ")invert(" + l + ")saturate(" + d + ")grayscale(" + e + ")\
       hue-rotate(" + r + ")contrast(" + k + ");-webkit-filter:sepia(" + n + ")\
@@ -252,7 +252,7 @@ function pwnyFilters() {
       a = document.getElementById("radGray").dataset.current + "%",
       l = document.getElementById("radInvert").dataset.current + "%",
       d = document.getElementById("radSaturate").dataset.current + "%",
-      k = document.getElementById("radContrast").dataset.current
+      k = document.getElementById("radContrast").dataset.current / 10
     pwn.style.cssText += "filter:brightness(" + t + ")sepia(" + n + ")\
       invert(" + l + ")saturate(" + d + ")grayscale(" + a + ")hue-rotate(" + e + ")\
       contrast(" + k + ");-webkit-filter:sepia(" + n + ")invert(" + l + ")\
