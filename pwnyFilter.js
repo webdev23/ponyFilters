@@ -136,7 +136,7 @@ function pwnyFilters() {
     if (document.getElementById("radContrast").checked >= 1) {
         document.getElementById("valBox").innerHTML =
       document.getElementById("inVal").value * 4 + 20; // <^_^>
-    var k = document.getElementById("valBox").innerHTML
+    var k = document.getElementById("valBox").innerHTML / 10
         var e = document.getElementById("radInvert").dataset.current + "%";
         var t = document.getElementById("radBright").dataset.current;
         var n = document.getElementById("radSepia").dataset.current + "%";
