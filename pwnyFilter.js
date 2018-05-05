@@ -7,7 +7,7 @@
 */
 
 // Bar html in a var
-var hdump = "";
+var hdump = ""
 hdump += '<big><bold>\
   <div class="fix"></div>\
   <div id="pwnyCtrl" class="barDrop" draggable="true" ondrag="pwnyMove()">\
@@ -37,7 +37,7 @@ hdump += '<big><bold>\
   <input type="range" style="display:inline;border:0;outline:0;margin:0 5px 0 5px" \
     min="0" max="100" step="1" value="00" id="inVal" data-current="00"\
     onwheel="if(this.value < 100){this.stepUp()};if(this.value >= 100){this.value=0}\
-    ;pwnyFilters()" /></input></form>\
+    ;pwnyFilters();pwnyScroll()" /></input></form>\
   <a onclick="document.body.style.cssText =\'filter:sepia(0%)invert(0%)saturate(0%)\
     brightness(100%)grayscale(0%)hue-rotate(0deg);\
     -webkit-filter:sepia(0%)invert(0%)saturate(0%)\
@@ -125,8 +125,8 @@ pwnyStyle.innerHTML = "\
   \
   ";
 // Inject on document
-document.getElementsByTagName("body")[0].appendChild(pwnyBar);
-document.getElementsByTagName("body")[0].appendChild(pwnyStyle);
+document.getElementsByTagName("body")[0].appendChild(pwnyBar)
+document.getElementsByTagName("body")[0].appendChild(pwnyStyle)
 
 // Filters functions
 function pwnyFilters() {
@@ -141,15 +141,14 @@ function pwnyFilters() {
         var t = document.getElementById("radBright").dataset.current;
         var n = document.getElementById("radSepia").dataset.current + "%";
         var a = document.getElementById("radGray").dataset.current + "%";
-        var r = document.getElementById("radHR").dataset.current;
+        var r = document.getElementById("radHR").dataset.current
         var d = document.getElementById("radSaturate").dataset.current + "%";
         pwn.style.cssText += "filter:brightness(" + t + ")\
       sepia(" + n + ")invert(" + e + ")saturate(" + d + ")grayscale(" + a + ")\
       hue-rotate(" + r + ")contrast(" + k + ");-webkit-filter:sepia(" + n + ")\
       invert(" + e + ")saturate(" + d + ")brightness(" + t + ")grayscale(" + a + ")\
-      hue-rotate(" + r + ")contrast(" + k + ")";
-      document.getElementById("radContrast").dataset.current = 
-      document.getElementById("inVal").value;
+      hue-rotate(" + r + ")contrast(" + k + ")"
+      document.getElementById("radContrast").dataset.current = document.getElementById("inVal").value
     }
     // Inversion
     if (document.getElementById("radInvert").checked >= 1) {
@@ -159,16 +158,15 @@ function pwnyFilters() {
         var t = document.getElementById("radBright").dataset.current;
         var n = document.getElementById("radSepia").dataset.current + "%";
         var a = document.getElementById("radGray").dataset.current + "%";
-        var r = document.getElementById("radHR").dataset.current;
+        var r = document.getElementById("radHR").dataset.current
         var d = document.getElementById("radSaturate").dataset.current + "%";
         var k = document.getElementById("radContrast").dataset.current;
         pwn.style.cssText += "filter:brightness(" + t + ")\
       sepia(" + n + ")invert(" + e + ")saturate(" + d + ")grayscale(" + a + ")\
       hue-rotate(" + r + ")contrast(" + k + ");-webkit-filter:sepia(" + n + ")\
       invert(" + e + ")saturate(" + d + ")brightness(" + t + ")grayscale(" + a + ")\
-      hue-rotate(" + r + ")contrast(" + k + ")";
-        document.getElementById("radInvert").dataset.current = 
-      document.getElementById("inVal").value;
+      hue-rotate(" + r + ")contrast(" + k + ")"
+      document.getElementById("radInvert").dataset.current = document.getElementById("inVal").value
     }
     // Sepia
     if (document.getElementById("radSepia").checked >= 1) {
@@ -187,8 +185,7 @@ function pwnyFilters() {
       hue-rotate(" + r + ")contrast(" + k + ");-webkit-filter:sepia(" + e + ")\
       invert(" + l + ")saturate(" + d + ")brightness(" + t + ")grayscale(" + a + ")\
       hue-rotate(" + r + ")contrast(" + k + ")";
-        document.getElementById("radSepia").dataset.current =
-      document.getElementById("inVal").value;
+      document.getElementById("radSepia").dataset.current = document.getElementById("inVal").value
     }
     // Saturation
     if (document.getElementById("radSaturate").checked >= 1) {
@@ -199,20 +196,19 @@ function pwnyFilters() {
         var l = document.getElementById("radInvert").dataset.current + "%";
         var n = document.getElementById("radSepia").dataset.current + "%";
         var a = document.getElementById("radGray").dataset.current + "%";
-        var r = document.getElementById("radHR").dataset.current;
+        var r = document.getElementById("radHR").dataset.current
         var k = document.getElementById("radContrast").dataset.current;
         pwn.style.cssText += "filter:brightness(" + t + ")\
       sepia(" + n + ")invert(" + l + ")saturate(" + e + ")grayscale(" + a + ")\
       hue-rotate(" + r + ")contrast(" + k + ");-webkit-filter:sepia(" + n + ")\
       invert(" + l + ")saturate(" + e + ")brightness(" + t + ")grayscale(" + a + ")\
-      hue-rotate(" + r + ")contrast(" + k + ")";
-        document.getElementById("radSaturate").dataset.current = 
-      document.getElementById("inVal").value;
+      hue-rotate(" + r + ")contrast(" + k + ")"
+      document.getElementById("radSaturate").dataset.current = document.getElementById("inVal").value
     }
     // brightness
     if (document.getElementById("radBright").checked >= 1) {
         document.getElementById("valBox").innerHTML = 
-      document.getElementById("inVal").value * 4 + 20 ;
+      document.getElementById("inVal").value * 4 + 20
         var e = document.getElementById("valBox").innerHTML + "%";
         var a = document.getElementById("radGray").dataset.current + "%";
         var r = document.getElementById("radHR").dataset.current;
@@ -224,14 +220,14 @@ function pwnyFilters() {
       sepia(" + n + ")invert(" + l + ")saturate(" + d + ")grayscale(" + a + ")\
       hue-rotate(" + r + ")contrast(" + k + ");-webkit-filter:sepia(" + n + ")\
       invert(" + l + ")saturate(" + d + ")brightness(" + e + ")grayscale(" + a + ")\
-      hue-rotate(" + r + ")contrast(" + k + ")";
+      hue-rotate(" + r + ")contrast(" + k + ")"
         document.getElementById("radBright").dataset.current =
-      document.getElementById("inVal").value;
+      document.getElementById("inVal").value
     }
     // Grayscale
     if (document.getElementById("radGray").checked >= 1) {
         document.getElementById("valBox").innerHTML = 
-      document.getElementById("inVal").value;
+      document.getElementById("inVal").value
         var e = document.getElementById("inVal").value + "%";
         var t = document.getElementById("radBright").dataset.current;
         var r = document.getElementById("radHR").dataset.current;
@@ -243,9 +239,8 @@ function pwnyFilters() {
       sepia(" + n + ")invert(" + l + ")saturate(" + d + ")grayscale(" + e + ")\
       hue-rotate(" + r + ")contrast(" + k + ");-webkit-filter:sepia(" + n + ")\
       invert(" + l + ")saturate(" + d + ")brightness(" + t + ")grayscale(" + e + ")\
-      hue-rotate(" + r + ")contrast(" + k + ")";
-        document.getElementById("radGray").dataset.current =
-      document.getElementById("inVal").value;
+      hue-rotate(" + r + ")contrast(" + k + ")"
+      document.getElementById("radGray").dataset.current = document.getElementById("inVal").value
     }
     // Hue rotate
     if (document.getElementById("radHR").checked >= 1) {
@@ -257,23 +252,15 @@ function pwnyFilters() {
       a = document.getElementById("radGray").dataset.current + "%",
       l = document.getElementById("radInvert").dataset.current + "%",
       d = document.getElementById("radSaturate").dataset.current + "%",
-      k = document.getElementById("radContrast").dataset.current;
+      k = document.getElementById("radContrast").dataset.current
     pwn.style.cssText += "filter:brightness(" + t + ")sepia(" + n + ")\
       invert(" + l + ")saturate(" + d + ")grayscale(" + a + ")hue-rotate(" + e + ")\
       contrast(" + k + ");-webkit-filter:sepia(" + n + ")invert(" + l + ")\
       saturate(" + d + ")brightness(" + t + ")grayscale(" + a + ")\
-      hue-rotate(" + e + ")contrast(" + k + ")";
-        document.getElementById("radHR").dataset.current =
-      document.getElementById("inVal").value;
+      hue-rotate(" + e + ")contrast(" + k + ")"
+    document.getElementById("radHR").dataset.current = document.getElementById("inVal").value
     }
 }
-
-// Open media unfiltered
-var bzs = document.body.getElementsByTagName("img");
-for (var i = 0; i < bzs.length;) {
-  var wi = bzs[i].width; var he = bzs[i].height;
-  bzs[i].setAttribute("onmouseup",
-    "window.open(this.src,'this.src','width="+wi+",height="+he+",resizable=1')"), i++;}
 
 // Adjust bar centering on scroll
 function pwnyScroll(){
@@ -288,19 +275,25 @@ function pwnColor_b(){
   document.body.style.backgroundColor = document.getElementById('pwnClrB').value
 }
 function pwnColor_c(){
-  var txt = document.getElementsByTagName("p");
-  for (var k=0;k<txt.length;k++){
-    if (txt.color != "") {
-      txt[k].style.color = document.getElementById('pwnClrC').value
-  }}
+  document.querySelectorAll("p, span, h1, h2, h3").forEach(function(e){  
+    e.style.color = localStorage.getItem('pwnClrC')
+  })
 }
 
 // Fix for firefox position:fixed bug when using css transformation
-if (!window.webkitURL){
-  document.body.setAttribute("onscroll","pwnyScroll()")
-  document.body.setAttribute("onresize","pwnyScroll()")
- }
+// if (!window.webkitURL){
+//  document.body.setAttribute("onscroll","pwnyScroll()")
+//  document.body.setAttribute("onresize","pwnyScroll()")
+// }
 console.log(pwnyBar);
+
+onload = (() => {
+  // Open media unfiltered
+  document.querySelectorAll("img").forEach(function(e){
+    e.setAttribute("onmouseup",
+      "window.open(this.src,'this.src','width="+wi+",height="+he+",resizable=1')"), i++;}
+  })
+})
 
 // keyboard events
 document.addEventListener('keydown', (event) => {
@@ -308,7 +301,7 @@ document.addEventListener('keydown', (event) => {
   if (keyName === 'Control') {return}
   if (event.ctrlKey) { var yop =  event.key;console.log(yop)
     if (yop ==","){
-      document.documentElement.style.cssText='filter:none;-webkit-filter:none';
+      document.documentElement.style.cssText = 'filter:none;-webkit-filter:none'
       writeStorage();
       window.location.reload(true)
       }
@@ -328,7 +321,7 @@ document.addEventListener('keydown', (event) => {
   -webkit-filter:sepia(41%)invert(11%)saturate(17%)\
   rightness(1) grayscale(17%) hue-rotate(20deg)'}
   }
- }, false);
+ }, false)
  
 // Save in local storage
 function writeStorage() {
