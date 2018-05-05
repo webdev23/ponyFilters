@@ -291,7 +291,7 @@ onload = (() => {
   // Open media unfiltered
   document.querySelectorAll("img").forEach(function(e){
     e.setAttribute("onmouseup",
-      "window.open(this.src,'this.src','width="+wi+",height="+he+",resizable=1')")
+      "window.open(this.src,'this.src','width="+e.width+",height="+e.height+",resizable=1')")
   })
   inVal.value = 5
 })
