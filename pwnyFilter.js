@@ -136,7 +136,7 @@ function pwnyFilters() {
     if (document.getElementById("radContrast").checked >= 1) {
         document.getElementById("valBox").innerHTML =
       document.getElementById("inVal").value * 4 + 20; // <^_^>
-    var k = document.getElementById("valBox").innerHTML / 10
+    var k = document.getElementById("valBox").innerHTML.substr(-1, 1) / 10
         var e = document.getElementById("radInvert").dataset.current + "%";
         var t = document.getElementById("radBright").dataset.current;
         var n = document.getElementById("radSepia").dataset.current + "%";
@@ -148,7 +148,7 @@ function pwnyFilters() {
       hue-rotate(" + r + ")contrast(" + k + ");-webkit-filter:sepia(" + n + ")\
       invert(" + e + ")saturate(" + d + ")brightness(" + t + ")grayscale(" + a + ")\
       hue-rotate(" + r + ")contrast(" + k + ")"
-      document.getElementById("radContrast").dataset.current = document.getElementById("inVal").value
+      document.getElementById("radContrast").dataset.current = document.getElementById("inVal").value.substr(-1, 1)
     }
     // Inversion
     if (document.getElementById("radInvert").checked >= 1) {
@@ -160,7 +160,7 @@ function pwnyFilters() {
         var a = document.getElementById("radGray").dataset.current + "%";
         var r = document.getElementById("radHR").dataset.current
         var d = document.getElementById("radSaturate").dataset.current + "%";
-        var k = document.getElementById("radContrast").dataset.current / 10
+        var k = document.getElementById("radContrast").dataset.current.substr(-1, 1) / 10
         pwn.style.cssText += "filter:brightness(" + t + ")\
       sepia(" + n + ")invert(" + e + ")saturate(" + d + ")grayscale(" + a + ")\
       hue-rotate(" + r + ")contrast(" + k + ");-webkit-filter:sepia(" + n + ")\
