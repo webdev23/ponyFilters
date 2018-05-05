@@ -296,10 +296,10 @@ function pwnColor_c(){
 }
 
 // Fix for firefox position:fixed bug when using css transformation
-// if (!window.webkitURL){
-//  document.body.setAttribute("onscroll","pwnyScroll()")
-//  document.body.setAttribute("onresize","pwnyScroll()")
-// }
+if (!window.webkitURL){
+  document.body.setAttribute("onscroll","pwnyScroll()")
+  document.body.setAttribute("onresize","pwnyScroll()")
+ }
 console.log(pwnyBar);
 
 // keyboard events
