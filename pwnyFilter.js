@@ -293,6 +293,7 @@ onload = (() => {
     e.setAttribute("onmouseup",
       "window.open(this.src,'this.src','width="+e.width+",height="+e.height+",resizable=1')")
   })
+  inVal.value = 5
   pwnyFilters()
 })
 
