@@ -33,11 +33,11 @@ hdump += '<big><bold>\
     href="javascript:void(0);" style="font-size:29px;\
     text-decoration:none;color:#111111;;vertical-align:middle;outline:0">&#9728;</a>\
   <span id="valBox">000%</span> \
-  <form style="display:inline;border:0;vertical-align:middle" oninput="pwnyFilters()">\
+  <form style="display:inline;border:0;vertical-align:middle">\
   <input type="range" style="display:inline;border:0;outline:0;margin:0 5px 0 5px" \
     min="0" max="100" step="1" value="00" id="inVal" data-current="00"\
     oninput="if(this.value < 100){this.stepUp()};if(this.value >= 100){this.value=0}\
-    " /></input></form>\
+    ;pwnyFilters()" /></input></form>\
   <a onclick="document.body.style.cssText =\'filter:sepia(0%)invert(0%)saturate(0%)\
     brightness(100%)grayscale(0%)hue-rotate(0deg);\
     -webkit-filter:sepia(0%)invert(0%)saturate(0%)\
@@ -293,7 +293,7 @@ onload = (() => {
     e.setAttribute("onmouseup",
       "window.open(this.src,'this.src','width="+e.width+",height="+e.height+",resizable=1')")
   })
-  inVal.value = 5
+  pwnyFilters()
 })
 
 // keyboard events
