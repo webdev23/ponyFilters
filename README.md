@@ -34,7 +34,7 @@ Or include <b>pwnyFilters.js</b> at the bottom of your page, to allow your users
 
 The script is going to be injected after all other scripts in the global context.
 <pre>
-    javascript:void%20function(){let%20targetx=[...document.querySelectorAll(%22script%22)].pop(),injx=document.createElement(%22script%22);injx.src=%22https://webdev23.github.io/ponyFilters/pwnyFilter.js%22;targetx.appendChild(injx)}();
+javascript:void%20function(){let%20targetx=[...document.querySelectorAll(%22script%22)].pop(),injx=document.createElement(%22script%22);injx.src=%22https://webdev23.github.io/ponyFilters/pwnyFilter.js%22;targetx.appendChild(injx)}();
 </pre>
 
 
