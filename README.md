@@ -32,9 +32,19 @@ Or include <b>pwnyFilters.js</b> at the bottom of your page, to allow your users
 
 ### The load anywhere bookmarklet:
 
-    javascript:void%20function(){target=document.getElementsByTagName(%22script%22)[0],inj=document.createElement(%22script%22),inj.src=%22https://webdev23.github.io/ponyFilters/pwnyFilter.js%22,target.appendChild(inj)}();
+The script is going to be injected after all other scripts in the global context.
+<pre>
+    javascript:void%20function(){let%20targetx=[...document.querySelectorAll(%22script%22)].pop(),injx=document.createElement(%22script%22);injx.src=%22https://webdev23.github.io/ponyFilters/pwnyFilter.js%22;targetx.appendChild(injx)}();
+</pre>
 
-### You may want to defer the load:
+
+### As a ES6 module with import:
+
+    (async () => {
+      await import('https://webdev23.github.io/ponyFilters/pwnyFilter.js')
+    })()
+
+### Or you may want to defer the load:
     
     setTimeout(function(){
     var target = document.getElementsByTagName('*')[0],
